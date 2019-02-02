@@ -9,12 +9,13 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.rodolfoizidoro.movilenext.R
 import com.example.rodolfoizidoro.movilenext.model.ProgrammingLanguage
+import com.example.rodolfoizidoro.movilenext.util.Action1
 import kotlinx.android.synthetic.main.program_language_item.view.*
 
 class ProgrammingLanguageAdapter(
     private val context: Context,
     private val items: List<ProgrammingLanguage>,
-    private val listener: (ProgrammingLanguage) -> Unit
+    private val listener: Action1
 ) : Adapter<ProgrammingLanguageAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -34,7 +35,7 @@ class ProgrammingLanguageAdapter(
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        fun bindView(item: ProgrammingLanguage, listener: (ProgrammingLanguage) -> Unit) = with(itemView) {
+        fun bindView(item: ProgrammingLanguage, listener: Action1) = with(itemView) {
             ivMain.setImageDrawable(ContextCompat.getDrawable(context, item.imageResId))
             tvTitle.text = item.title
             tvLaunchYear.text = item.year.toString()
