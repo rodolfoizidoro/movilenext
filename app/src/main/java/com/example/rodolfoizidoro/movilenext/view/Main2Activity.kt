@@ -22,7 +22,9 @@ class Main2Activity : AppCompatActivity() {
         const val NEW_WORD_ACTIVITY_REQUEST_CODE = 1
     }
 
-    private lateinit var wordViewModel: WordViewModel
+    private val wordViewModel: WordViewModel by lazy {
+        ViewModelProviders.of(this).get(WordViewModel::class.java)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +35,6 @@ class Main2Activity : AppCompatActivity() {
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        wordViewModel = ViewModelProviders.of(this).get(WordViewModel::class.java)
         wordViewModel.allWords.observe(this, Observer {
             adapter.words = it
         })
