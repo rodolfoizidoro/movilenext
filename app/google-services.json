@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "95054969956",
+    "firebase_url": "https://movile-next-6ea32.firebaseio.com",
+    "project_id": "movile-next-6ea32",
+    "storage_bucket": "movile-next-6ea32.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:95054969956:android:21a6c96f911a1b35",
+        "android_client_info": {
+          "package_name": "com.example.rodolfoizidoro.movilenext"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "95054969956-5jhabtphbqsa4v3p26caelkqsdjvfjub.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1Kahms7UTKYUVb3806sVaot4RscYlHHs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
