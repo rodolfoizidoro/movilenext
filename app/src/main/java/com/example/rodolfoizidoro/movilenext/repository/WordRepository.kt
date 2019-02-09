@@ -12,8 +12,8 @@ class WordRepository(application: Application) {
     val allWords: LiveData<List<Word>>
 
     init {
-        val database = WordRoomDatabase.getDatabase(application)
-        wordDAO = database.wordDao()
+        val db = WordRoomDatabase.getDatabase(application)
+        wordDAO = db.wordDao()
         allWords = wordDAO.getAllWords()
     }
 
